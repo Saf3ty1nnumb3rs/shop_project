@@ -6,9 +6,7 @@ import directories from '../../utils/directories'
 import './Directory.scss'
 
 const renderItems = items => {
-  return items.map(({ title, imageUrl, id, size }) => (
-    <MenuItem key={title} title={title} image={imageUrl} id={id} size={size} />
-  ))
+  return items.map(({ id, ...sectionProps }) => <MenuItem key={id} {...sectionProps} />)
 }
 const Directory = () => {
   return <div className="directory-menu">{renderItems(directories)}</div>
