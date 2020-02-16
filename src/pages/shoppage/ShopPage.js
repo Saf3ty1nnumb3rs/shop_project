@@ -11,12 +11,7 @@ const ShopPage = () => {
   const renderCollections = () => {
     return items.map(({ id, ...collectionProps }) => <CollectionPreview {...collectionProps} key={id} />)
   }
-  return (
-    <div className="shop-page">
-      <div>Shop</div>
-      {renderCollections()}
-    </div>
-  )
+  return <div className="shop-page">{renderCollections()}</div>
 }
 
 export default ShopPage
