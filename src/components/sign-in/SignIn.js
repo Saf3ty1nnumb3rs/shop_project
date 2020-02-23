@@ -18,7 +18,7 @@ const SignIn = () => {
 
   return (
     <div className="sign-in">
-      <h2>I already have an account</h2>
+      <h2 className="title">I already have an account</h2>
       <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
@@ -40,7 +40,7 @@ const SignIn = () => {
         />
         <div className="buttons">
           <CustomButton type="submit">Sign In</CustomButton>
-          <CustomButton isGoogleSignIn onClick={signInWithGoogle}>
+          <CustomButton isgooglesignin onClick={signInWithGoogle}>
             Sign In With Google
           </CustomButton>
         </div>
