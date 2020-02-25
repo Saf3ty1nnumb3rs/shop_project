@@ -1,5 +1,11 @@
 const initialState = {
-  currentUser: null
+  user: {
+    currentUser: null
+  },
+  cart: {
+    hidden: true,
+    cartItems: []
+  }
 }
 
 export default initialState

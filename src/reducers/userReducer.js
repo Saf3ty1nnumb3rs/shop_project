@@ -1,7 +1,7 @@
 import { SET_CURRENT_USER } from '../actions/actionTypes'
 import initialState from './initialState'
 
-const userReducer = (state = initialState, action) => {
+const userReducer = (state = initialState.user, action) => {
   switch (action.type) {
     case SET_CURRENT_USER:
       return {
@@ -12,4 +12,5 @@ const userReducer = (state = initialState, action) => {
       return state
   }
 }
+
 export default userReducer
