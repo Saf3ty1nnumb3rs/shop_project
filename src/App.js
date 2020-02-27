@@ -15,7 +15,6 @@ import { selectCurrentUser } from './selectors/userSelector'
 import { auth, createUserProfileDocument } from './firebase/firebase'
 
 import './App.css'
-
 class App extends Component {
   unsubscribeFromAuth = null
 
