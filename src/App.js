@@ -4,9 +4,10 @@ import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
 import Header from './components/header/Header'
-import HomePage from './pages/homepage/HomePage'
 import ShopPage from './pages/shoppage/ShopPage'
 import CheckoutPage from './pages/checkoutpage/CheckoutPage'
+import HomePage from './pages/homepage/HomePage'
+
 import SignInSignUpPage from './pages/sign-in-sign-up/SignInSignUpPage'
 import { setCurrentUser } from './actions/userActions'
 import { selectCurrentUser } from './selectors/userSelector'
