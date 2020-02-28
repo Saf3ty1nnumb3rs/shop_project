@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import CollectionItem from '../../components/collection-item/CollectionItem'
 import { selectCollection } from '../../selectors/shopSelector'
 
@@ -14,6 +15,9 @@ const CollectionPage = ({ collection }) => {
     <div className="collection-page">
       <h2 className="title">{title}</h2>
       <div className="items">{renderCollection()}</div>
+      <Link to={'/shop'}>
+        <h1>BACK TO SHOP</h1>
+      </Link>
     </div>
   )
 }

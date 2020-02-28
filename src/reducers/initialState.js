@@ -10,9 +10,7 @@ const initialState = {
     cartItems: []
   },
   directory,
-  collections: {
-    shopItems
-  }
+  collections: null
 }
 
 export default initialState
