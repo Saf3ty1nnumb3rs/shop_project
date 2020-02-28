@@ -16,7 +16,7 @@ const CollectionPage = ({ collection }) => {
       <h2 className="title">{title}</h2>
       <div className="items">{renderCollection()}</div>
       <Link to={'/shop'}>
-        <h1>BACK TO SHOP</h1>
+        <h2>&#x219E; BACK TO SHOP</h2>
       </Link>
     </div>
   )

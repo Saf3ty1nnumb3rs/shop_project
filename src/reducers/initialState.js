@@ -1,5 +1,4 @@
 import directory from '../utils/directories'
-import shopItems from '../utils/shopItems'
 
 const initialState = {
   user: {
@@ -10,7 +9,11 @@ const initialState = {
     cartItems: []
   },
   directory,
-  collections: null
+  collections: {
+    collections: null,
+    isFetching: false,
+    errorMessage: null
+  }
 }
 
 export default initialState
