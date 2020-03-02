@@ -2,7 +2,8 @@ import directory from '../utils/directories'
 
 const initialState = {
   user: {
-    currentUser: null
+    currentUser: null,
+    errorMessage: null
   },
   cart: {
     hidden: true,

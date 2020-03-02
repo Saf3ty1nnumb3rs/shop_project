@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 import CollectionsOverviewContainer from '../../components/collections-overview/CollectionsOverviewContainer'
 import CollectionPageContainer from '../collection-page/CollectionPageContainer'
-import { getCollections } from '../../actions/shopActions'
+import { requestCollections } from '../../actions/shopActions'
 
 const ShopPage = ({ match, getCollections }) => {
   useEffect(() => {
@@ -19,6 +19,6 @@ const ShopPage = ({ match, getCollections }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  getCollections: () => dispatch(getCollections())
+  getCollections: () => dispatch(requestCollections())
 })
 export default connect(null, mapDispatchToProps)(ShopPage)

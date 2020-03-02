@@ -6,12 +6,13 @@ import { auth } from '../../firebase/firebase'
 
 import CartIcon from '../cart-icon/CartIcon'
 import CartDropdown from '../cart-dropdown/CartDropdown'
+import { requestSignOut } from '../../actions/userActions'
 import { selectCartHidden } from '../../selectors/cartSelector'
 import { selectCurrentUser } from '../../selectors/userSelector'
 
 import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './Header.styles'
 
-const Header = ({ currentUser, cartHidden }) => (
+const Header = ({ currentUser, cartHidden, requestSignOut }) => (
   <HeaderContainer>
     <LogoContainer to="/">
       <Logo className="logo" />
@@ -20,7 +21,7 @@ const Header = ({ currentUser, cartHidden }) => (
       <OptionLink to="/shop">SHOP</OptionLink>
       <OptionLink to="/shop">CONTACT</OptionLink>
       {currentUser ? (
-        <OptionLink as="div" onClick={() => auth.signOut()}>
+        <OptionLink as="div" onClick={requestSignOut}>
           SIGN OUT
         </OptionLink>
       ) : (
@@ -36,4 +37,7 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   cartHidden: selectCartHidden
 })
-export default connect(mapStateToProps)(Header)
+const mapDispatchToProps = dispatch => ({
+  requestSignOut: () => dispatch(requestSignOut())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

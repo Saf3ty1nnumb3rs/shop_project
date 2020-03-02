@@ -1,4 +1,4 @@
-import { TOGGLE_CART_HIDDEN, ADD_ITEM, REMOVE_ITEM, REMOVE_ITEM_FROM_CART } from '../actions/actionTypes'
+import { TOGGLE_CART_HIDDEN, ADD_ITEM, REMOVE_ITEM, REMOVE_ITEM_FROM_CART, CLEAR_CART } from '../actions/actionTypes'
 import initialState from './initialState'
 import { addItemToCart, removeItemFromCart } from '../utils/cart'
 
@@ -23,6 +23,11 @@ const cartReducer = (state = initialState.cart, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter(item => item.id !== action.payload.id)
+      }
+    case CLEAR_CART:
+      return {
+        ...state,
+        cartItems: []
       }
     default:
       return state
